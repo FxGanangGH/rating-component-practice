@@ -55,15 +55,19 @@ import { ref } from "vue";
 
 const submitRating = ref(false);
 const rateScore = ref(0);
-const activeRating = ref();
+const activeRating = ref<number | undefined>(undefined);
 const ratingList = [1, 2, 3, 4, 5];
 
 const activateRating = (rating: number) => {
   activeRating.value = rating;
 };
 
-const updateRating = (rating: number) => {
-  submitRating.value = !submitRating.value;
-  rateScore.value = rating + 1;
+const updateRating = (rating: number | undefined) => {
+  if (rating === undefined) {
+    alert("Please choose a rating");
+  } else {
+    submitRating.value = !submitRating.value;
+    rateScore.value = rating + 1;
+  }
 };
 </script>
