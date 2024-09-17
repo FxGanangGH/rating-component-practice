@@ -7,7 +7,7 @@
     >
       <div v-show="!submitRating" class="flex flex-col gap-y-5">
         <span class="flex size-10 items-center justify-center rounded-full bg-white/5">
-          <img src="/images/icon-star.svg" />
+          <img src="/images/icon-star.svg" alt="star" />
         </span>
         <h1 class="font-overpass text-2xl text-white">How did we do ?</h1>
         <p class="font-overpass text-rating text-neutral-grey">
@@ -36,7 +36,7 @@
         v-show="submitRating"
         class="flex flex-col items-center justify-center gap-y-5"
       >
-        <img src="/images/illustration-thank-you.svg" />
+        <img src="/images/illustration-thank-you.svg" alt="thank you" />
         <span
           class="flex w-2/3 items-center justify-center rounded-full bg-white/5 px-2 pb-1 pt-2 font-overpass text-rating font-light text-primary-500/80"
           >You selected {{ rateScore }} out of 5</span
