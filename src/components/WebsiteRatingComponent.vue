@@ -19,8 +19,11 @@
             @click="activateRating(index)"
             v-for="(rating, index) in ratingList"
             :key="index"
-            class="flex size-9 items-center justify-center rounded-full bg-white/5 pt-1 font-overpass text-sm font-bold text-neutral-grey hover:cursor-pointer hover:bg-primary-500 hover:text-neutral-blue-600 desktop:size-11 desktop:text-rating"
-            :class="{ 'bg-white/100': activeRating === index }"
+            class="flex size-9 items-center justify-center rounded-full pt-1 font-overpass text-sm font-bold hover:cursor-pointer hover:bg-primary-500 hover:text-neutral-blue-600 desktop:size-11 desktop:text-rating"
+            :class="{
+              'bg-white/100 text-neutral-blue-700': activeRating === index,
+              'bg-white/5 text-neutral-grey': activeRating !== index,
+            }"
           >
             {{ rating }}
           </span>
